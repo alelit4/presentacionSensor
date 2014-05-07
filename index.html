@@ -48,6 +48,8 @@
 					<p>
 						<small> José, Iván y Alexandra </small>
 					</p>
+					<img src="img/photo-icons.gif" style="width:300px; border-radius:30px;" />
+
 				</section>
 				<section>
 					<h2>¿Qué hemos hecho?</h2>
@@ -100,12 +102,22 @@
 						## Ejemplo de Código TODO
 
 						```
-						<section data-markdown>
-						  ## Markdown support
-
-						  For those of you who like that sort of thing.
-						  Instructions and a bit more info available [here](https://github.com/hakimel/reveal.js#markdown).
-						</section>
+						#include <Wire.h> 
+						#include <LiquidCrystal_I2C.h>
+						  
+						LiquidCrystal_I2C lcd(0x27,16,2);
+						  
+						void setup() {
+						    
+						    lcd.init(); 
+						    lcd.backlight();
+						    
+						    Serial.begin(9600);
+						    Serial2.begin(9600);
+						    //Serial.println("Ready");
+						    
+						    pinMode(47, OUTPUT);
+						    pinMode(18, OUTPUT);
 						```
 					</script>
 				</section>
@@ -133,6 +145,14 @@
 					<img src="img/web.png" style="width:400px; border-radius:30px;"/>
 					<img src="img/web2.png" style="width:400px; border-radius:30px;"/>
 					<img src="img/web3.png" style="width:400px; border-radius:30px;"/>
+				</section>
+				<section>
+					<h1>Otras tecnologías </h1>
+					<img src="img/node.jpg" style="width:500px; border-radius:20px;"/>
+					<img src="img/angularjs-logo.png" style="width:500px; border-radius:20px;"/>
+					<img src="img/mongodb.png" style="width:500px; border-radius:20px;"/>
+					
+
 				</section>
 				<!-- Desde el SW se hace una peticion de T/L, se envía la peticion al Arduino mediante el Puerto Serie, Arduino pide los datos (espera) y responde a todas las salidas (Serie -> SW) (UART -> Transceiver) (SDA -> Display) -->
 				<section>
